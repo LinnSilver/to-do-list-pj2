@@ -1,0 +1,13 @@
+body{
+    font-family: 'Marck Script', cursive;
+    font-size:1.25rem;
+    letter-spacing: 0.05rem;
+    background-color: rgb(195, 248, 248);
+}
+
+h1, h2, h3{
+    font-family: 'Bad Script', cursive;
+    letter-spacing: 0.1rem;
+}
+
+
