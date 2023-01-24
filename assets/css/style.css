@@ -3,6 +3,7 @@ body{
     font-family: 'Marck Script', cursive;
     font-size:1.25rem;
     letter-spacing: 0.05rem;
+    color: aqua;
 }
 
 h1, h2, h3{
@@ -11,14 +12,10 @@ h1, h2, h3{
     color: aqua;
 }
 
-box{
-    background-color: rgb(195, 248, 248);
-    background-color: transparent;
-}
 
 .hero {
     background-color: black;
-    background-image: url("../images/times-square-s.jpg");
+    /*background-image: url("../images/times-square-s.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
 
