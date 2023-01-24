@@ -29,11 +29,30 @@ function createListIthem(){
     }
 
     let newListIthem = document.createElement("li");
-    newListIthem.setAttribute("id", "todo_" + todoNr);
-    newListIthem.innerHTML = '<input type = "checkbox"  onClick="toDoDone(' + todoNr + ')">' + newTask;
+    newListIthem.setAttribute("id", 'todo_' + todoNr);
+    newListIthem.innerHTML = '<input type="checkbox" onClick="toDoDone(' + todoNr + ')"> ' + newTask; 
     console.log(newListIthem);
     document.getElementById("todo").appendChild(newListIthem);
 
     //clears inputfeald after adding to list.
     document.getElementById(Input).value = "";
+}
+
+//When checkbok is check moves listithems to compleated list
+function toDoDone(rowID){
+
+    console.log('ToDo done #'+rowID);
+
+    //Get value from id row
+    let value = document.getElementById('todo_' + rowID).innerText;
+    
+    //Add new row to done
+    let newDone = document.createElement("li");
+
+    //add Get row to new row
+    newDone.innerHTML = '<input type="checkbox" checked disabled="disabled"> ' + value;
+    document.getElementById("done").appendChild(newDone);
+
+    //Remove from row
+    document.getElementById('todo_' + rowID).remove();
 }
