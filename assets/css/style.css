@@ -24,3 +24,7 @@ h1, h2, h3{
     padding-left: 30px;
     padding-bottom: 800px;
 }
+
+ul {
+    list-style-type: none;
+}
