@@ -56,3 +56,8 @@ function toDoDone(rowID){
     //Remove from row
     document.getElementById('todo_' + rowID).remove();
 }
+
+//Listen for click button clearTaskbutton 
+document.getElementById("clearTaskButton").addEventListener("click", () => {
+    document.getElementById("done").innerHTML = "";
+})
