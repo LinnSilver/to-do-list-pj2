@@ -1,13 +1,29 @@
 body{
+    margin: 0;
     font-family: 'Marck Script', cursive;
     font-size:1.25rem;
     letter-spacing: 0.05rem;
-    background-color: rgb(195, 248, 248);
 }
 
 h1, h2, h3{
     font-family: 'Bad Script', cursive;
     letter-spacing: 0.1rem;
+    color: aqua;
 }
 
+box{
+    background-color: rgb(195, 248, 248);
+    background-color: transparent;
+}
 
+.hero {
+    background-color: black;
+    background-image: url("../images/times-square-s.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-left: 30px;
+    padding-bottom: 800px;
+}
