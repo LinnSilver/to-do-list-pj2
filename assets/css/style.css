@@ -64,3 +64,10 @@ ul {
     font-size: 1rem;
     margin: 3px;
   }
+
+  /*Media queri (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .backgrondbox {
+      width: 500px;
+    }
+}
