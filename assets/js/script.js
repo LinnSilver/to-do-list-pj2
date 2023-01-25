@@ -1,7 +1,7 @@
 //Start counting for id number on list task.
 var todoNr = 0;
 
-//Listen for click createTaskButton to create list ithem.
+//Listen for click createTaskButton to create list item.
 document.getElementById("createTaskButton").addEventListener("click", () => {
     createListIthem();
 });
@@ -28,20 +28,20 @@ function createListIthem(){
         return false;
     }
 
-    let newListIthem = document.createElement("li");
-    newListIthem.setAttribute("id", 'todo_' + todoNr);
-    newListIthem.innerHTML = '<input type="checkbox" onClick="toDoDone(' + todoNr + ')"> ' + newTask; 
-    console.log(newListIthem);
-    document.getElementById("todo").appendChild(newListIthem);
+    let newListItem = document.createElement("li");
+    newListItem.setAttribute("id", 'todo_' + todoNr);
+    newListItem.innerHTML = '<input type="checkbox" onClick="toDoDone(' + todoNr + ')"> ' + newTask; 
+    console.log(newListItem);
+    document.getElementById("todo").appendChild(newListItem);
 
-    //clears inputfeald after adding to list.
+    //clears input field after adding to list.
     document.getElementById(Input).value = "";
 }
 
-//When checkbok is check moves listithems to compleated list
+//When checkbox is check, moves list items to completed list
 function toDoDone(rowID){
 
-    console.log('ToDo done #'+rowID);
+    console.log('toDoDone #'+rowID);
 
     //Get value from id row
     let value = document.getElementById('todo_' + rowID).innerText;
@@ -57,7 +57,7 @@ function toDoDone(rowID){
     document.getElementById('todo_' + rowID).remove();
 }
 
-//Listen for click button clearTaskbutton 
+//Listen for click button clearTaskButton 
 document.getElementById("clearTaskButton").addEventListener("click", () => {
     document.getElementById("done").innerHTML = "";
 })

@@ -1,17 +1,19 @@
 body{
     margin: 0;
-    font-family: 'Marck Script', cursive;
+    font-family: 'Bad Script', cursive;
     font-size: 1.25rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.1rem;
     color:rgb(89, 238, 238);
 }
 
 h1, h2, h3{
     font-family: 'Bad Script', cursive;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.13rem;
     color:rgb(89, 238, 238);
+    margin-left: 3px;
 }
 
+/* Background hero image */
 .hero {
     background-color: black;
     background-image: url("../images/times-square-s.jpg");
@@ -25,7 +27,8 @@ h1, h2, h3{
     padding-bottom: 800px;
 }
 
-.backgrondbox {
+/* Container for list */
+.backgroundbox {
     background-color: rgba(0, 0, 0, 0.7);
      margin: 0 auto;
      width: 80%;
@@ -39,9 +42,10 @@ h1, h2, h3{
 ul {
     list-style-type: none;
     padding-left: 0;
+    margin-left: 3px;
 }
 
-/* inputfeald */
+/* Input field */
 #newInput {
     color: rgb(0, 0, 0);
     padding: 5px 15px;
@@ -66,9 +70,9 @@ ul {
     margin: 3px;
   }
 
-  /*Media queri (landscape tablets, 768px and up) */
+  /* Media query (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .backgrondbox {
+    .backgroundbox {
       width: 500px;
     }
 }

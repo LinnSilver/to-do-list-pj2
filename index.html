@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Marck+Script&display=swap" rel="stylesheet">
-    <!--Fontasome and Favicon-->
+    <!--Fontawesome and Favicon-->
     <script src="https://kit.fontawesome.com/05537a6809.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 
@@ -18,21 +18,25 @@
 </head>
 <body >
   <div class="hero" >
-    <div class="backgrondbox">
+    <div class="backgroundbox">
       <h1><i class="fa-regular fa-square-check"></i> To Do List</h1>
       <div>
+           <!--Input field-->
         <input id="newInput" aria-label="Enter to do task" type="text">
+          <!--Button to submit task to list-->
         <button id="createTaskButton" class="button" type="button">Create new task</button>
         <ul id="todo">
+          
         </ul>
       </div>
 
       <div>
-        <h3>Compleated</h3>
+        <h3>Completed</h3>
         <ul id="done">
 
           </ul>
-          <button id="clearTaskButton" class="button" type="button">Clear compleated</button>
+              <!--Button to clear completed tasks-->
+          <button id="clearTaskButton" class="button" type="button">Clear completed</button>
       </div>
     </div>
   </div>
