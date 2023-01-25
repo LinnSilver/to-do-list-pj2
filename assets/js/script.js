@@ -1,9 +1,10 @@
 //Start counting for id number on list task.
 let todoNr = 0;
 
-//Listen for click createTaskButton to create list item.
+//Listen for click createTaskButton to create list item. 
 document.getElementById("createTaskButton").addEventListener("click", () => {
     createListIthem();
+    document.getElementById("newInput").focus ();
 });
 
 //Listen for enter key up to create list item.
@@ -11,6 +12,7 @@ let newTask = document.getElementById("newInput");
 newTask.addEventListener("keyup", (event) => {
     if(event.key === "Enter"){
         createListIthem();
+        document.getElementById("newInput").focus ();
     }
 });
 
@@ -36,6 +38,7 @@ function createListIthem(){
 
     //clears input field after adding to list.
     document.getElementById(input).value = "";
+  
 };
 
 //When checkbox is check, moves list items to completed list
