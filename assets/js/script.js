@@ -12,7 +12,7 @@ newTask.addEventListener("keyup", (event) => {
     if(event.key === "Enter"){
         createListIthem();
     }
-})
+});
 
 //Add task to list. 
 function createListIthem(){
@@ -36,7 +36,7 @@ function createListIthem(){
 
     //clears input field after adding to list.
     document.getElementById(Input).value = "";
-}
+};
 
 //When checkbox is check, moves list items to completed list
 function toDoDone(rowID){
@@ -60,4 +60,4 @@ function toDoDone(rowID){
 //Listen for click button clearTaskButton 
 document.getElementById("clearTaskButton").addEventListener("click", () => {
     document.getElementById("done").innerHTML = "";
-})
+});
