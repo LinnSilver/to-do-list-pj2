@@ -1,5 +1,5 @@
 //Start counting for id number on list task.
-var todoNr = 0;
+let todoNr = 0;
 
 //Listen for click createTaskButton to create list item.
 document.getElementById("createTaskButton").addEventListener("click", () => {
@@ -19,12 +19,12 @@ function createListIthem(){
 
     //Add id number to list task
     todoNr++;
-    let Input = "newInput";
-    let newTask = document.getElementById(Input).value;
+    let input = "newInput";
+    let newTask = document.getElementById(input).value;
 
     //Prevent empty input.
     if (newTask.trim() === ""){
-        alert("Input field is empty. Please write something!");
+        swal.fire("Input field is empty. Please write something!")
         return false;
     }
 
@@ -35,7 +35,7 @@ function createListIthem(){
     document.getElementById("todo").appendChild(newListItem);
 
     //clears input field after adding to list.
-    document.getElementById(Input).value = "";
+    document.getElementById(input).value = "";
 };
 
 //When checkbox is check, moves list items to completed list
