@@ -1,20 +1,35 @@
 //Start counting for id number on list task.
-let todoNr = 0;
+let taskIdCount = 0;
 
-//Listen for click createTaskButton to create list item. 
-document.getElementById("createTaskButton").addEventListener("click", () => {
-    createListIthem();
-    document.getElementById("newInput").focus ();
-});
+// list/add/delete
 
-//Listen for enter key up to create list item.
-let newTask = document.getElementById("newInput");
-newTask.addEventListener("keyup", (event) => {
-    if(event.key === "Enter"){
-        createListIthem();
-        document.getElementById("newInput").focus ();
+//Load task array
+function taskList(){
+
+    //Load task array
+    let tasks = storageList('tasks');
+
+    if (tasks.length === 0){
+        return false;
     }
-});
+    taskIdCount = tasks.length;
+
+    document.getElementById("todo").innerHTML = "";
+
+    //Create undone task list
+    tasks.forEach(function callback(value, index) {
+
+        if (value !== null){
+            let newListItem = document.createElement("li");
+            newListItem.setAttribute("id", 'todo_' + index);
+            newListItem.innerHTML = '<input type="checkbox" onClick="taskDone(' + index + ')"> ' + 
+                                    value + 
+                                    ' <a href="javascript:taskDelete(' + index + ')"><i class="fa-regular fa-cross" onClick="taskDelete(' + index + ')"></i></a>';
+            document.getElementById("todo").appendChild(newListItem);              
+        }
+    });
+    document.getElementById("newInput").focus();
+}
 
 //Add task to list. 
 function createListIthem(){
@@ -60,7 +75,25 @@ function toDoDone(rowID){
     document.getElementById('todo_' + rowID).remove();
 }
 
-//Listen for click button clearTaskButton 
+
+
+
+//Listen for click createTaskButton to create list item. 
+document.getElementById("createTaskButton").addEventListener("click", () => {
+    createListIthem();
+    document.getElementById("newInput").focus ();
+});
+
+//Listen for enter key up to create list item.
+let newTask = document.getElementById("newInput");
+newTask.addEventListener("keyup", (event) => {
+    if(event.key === "Enter"){
+        createListIthem();
+        document.getElementById("newInput").focus();
+    }
+});
+
+//Listen for click clearTaskButton to remove done list item. 
 document.getElementById("clearTaskButton").addEventListener("click", () => {
     document.getElementById("done").innerHTML = "";
 });
