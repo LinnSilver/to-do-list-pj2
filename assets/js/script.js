@@ -32,12 +32,11 @@ function taskList(){
 }
 
 //Add task to list. 
-function createListIthem(){
+function taskAdd(){
 
-    //Add id number to list task
-    todoNr++;
-    let input = "newInput";
-    let newTask = document.getElementById(input).value;
+    //Get task info and remove html markup
+    let newTask = document.getElementById("newInput").value;
+    newTask =newTask.replace(/(<([^>]+)>)/gi, "");
 
     //Prevent empty input.
     if (newTask.trim() === ""){
@@ -45,14 +44,13 @@ function createListIthem(){
         return false;
     }
 
-    let newListItem = document.createElement("li");
-    newListItem.setAttribute("id", 'todo_' + todoNr);
-    newListItem.innerHTML = '<input type="checkbox" onClick="toDoDone(' + todoNr + ')"> ' + newTask; 
-    console.log(newListItem);
-    document.getElementById("todo").appendChild(newListItem);
+    //add task to starage
+    storageUpdeta('tasks', taskIdCount, newTask);
+
+    taskList();
 
     //clears input field after adding to list.
-    document.getElementById(input).value = "";
+    document.getElementById("newInput").value = "";
   
 };
 
@@ -80,7 +78,7 @@ function toDoDone(rowID){
 
 //Listen for click createTaskButton to create list item. 
 document.getElementById("createTaskButton").addEventListener("click", () => {
-    createListIthem();
+    taskAdd();
     document.getElementById("newInput").focus ();
 });
 
@@ -88,7 +86,7 @@ document.getElementById("createTaskButton").addEventListener("click", () => {
 let newTask = document.getElementById("newInput");
 newTask.addEventListener("keyup", (event) => {
     if(event.key === "Enter"){
-        createListIthem();
+        taskAdd();
         document.getElementById("newInput").focus();
     }
 });
