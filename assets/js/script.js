@@ -45,7 +45,7 @@ function taskAdd(){
     }
 
     //add task to starage
-    storageUpdeta('tasks', taskIdCount, newTask);
+    storageUpdate('tasks', taskIdCount, newTask);
 
     taskList();
 
@@ -53,6 +53,8 @@ function taskAdd(){
     document.getElementById("newInput").value = "";
   
 };
+
+
 
 //When checkbox is check, moves list items to completed list
 function taskDone(rowID){
@@ -73,13 +75,48 @@ function taskDone(rowID){
     taskList();
 }
 
+//Storage
 
+function storageList(storage){
 
+    if (localStorage.getItem(storage) === null){
+        return[];
+    }
+
+    let data = JSON.parse(localStorage.getItem(storage));
+
+    if (data.join(',').replace(/,/g, '').length === 0) {
+        localStorage.clear();
+    }
+    return data;
+}
+
+function starageUpdate(storage, id, value){
+
+    let data = storageList(storage);
+    data[id] = value;
+    localStorage.setItem(storage,JSON.stringify(data));
+}
+
+function storageDelete(starage, id){
+
+    let data = storageList(storage);
+
+    //remove data
+    delete data [id];
+    
+    data.filter(n => n);
+    data.filter(Number);
+    data.filter(Boolean);
+
+    localStorage.setItem(storage, JSON.stringify(data));
+}
+
+taskList();
 
 //Listen for click createTaskButton to create list item. 
 document.getElementById("createTaskButton").addEventListener("click", () => {
     taskAdd();
-    document.getElementById("newInput").focus ();
 });
 
 //Listen for enter key up to create list item.
