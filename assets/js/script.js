@@ -16,16 +16,16 @@ function taskList(){
 
     document.getElementById("todo").innerHTML = "";
 
-    //Create undone task list
+    //Create undone task list 
     tasks.forEach(function callback(value, index) {
 
         if (value !== null){
             let newListItem = document.createElement("li");
             newListItem.setAttribute("id", 'todo_' + index);
-            newListItem.innerHTML =  '<input type="checkbox" onClick="taskDone(' + index + ')"> ' + 
+            newListItem.innerHTML = '<input type="checkbox" aria-label="checkbox" onClick="taskDone(' + index + ')"> ' + 
             value + 
-            ' <a href="javascript:taskDelete(' + index + ')"><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
-            document.getElementById("todo").appendChild(newListItem);              
+            ' <a href="javascript:taskDelete(' + index + ')" aria-label="Trashcan to delete task" ><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
+            document.getElementById("todo").appendChild(newListItem);                 
         }
     });
     document.getElementById("newInput").focus();
@@ -52,7 +52,7 @@ function taskAdd(){
     //clears input field after adding to list.
     document.getElementById("newInput").value = "";
   
-};
+}
 
 function taskDelete(rowID){
 
@@ -84,13 +84,13 @@ function taskDone(rowID){
 
 function storageList(storage){
 
-    if (localStorage.getItem(storage) === null){
-        return[];
+    if (localStorage.getItem(storage) === null) {
+        return [];
     }
 
     let data = JSON.parse(localStorage.getItem(storage));
 
-    if (data.join(',').replace(/,/g, '').length === 0) {
+    if(data.join(',').replace(/,/g, '').length === 0) {
         localStorage.clear();
     }
     return data;
@@ -103,12 +103,12 @@ function storageUpdate(storage, id, value){
     localStorage.setItem(storage,JSON.stringify(data));
 }
 
-function storageDelete(starage, id){
+function storageDelete(storage, id){
 
     let data = storageList(storage);
 
     //remove data
-    delete data [id];
+    delete data[id];
     
     data.filter(n => n);
     data.filter(Number);
