@@ -55,9 +55,7 @@ function taskAdd(){
 };
 
 //When checkbox is check, moves list items to completed list
-function toDoDone(rowID){
-
-    console.log('toDoDone #'+rowID);
+function taskDone(rowID){
 
     //Get value from id row
     let value = document.getElementById('todo_' + rowID).innerText;
@@ -69,8 +67,10 @@ function toDoDone(rowID){
     newDone.innerHTML = '<input type="checkbox" checked disabled="disabled"> ' + value;
     document.getElementById("done").appendChild(newDone);
 
-    //Remove from row
-    document.getElementById('todo_' + rowID).remove();
+    //Remove from storage
+    storageDelete('tasks', rowID);
+
+    taskList();
 }
 
 
