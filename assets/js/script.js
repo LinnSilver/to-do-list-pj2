@@ -22,9 +22,9 @@ function taskList(){
         if (value !== null){
             let newListItem = document.createElement("li");
             newListItem.setAttribute("id", 'todo_' + index);
-            newListItem.innerHTML = '<input type="checkbox" onClick="taskDone(' + index + ')"> ' + 
-                                    value + 
-                                    ' <a href="javascript:taskDelete(' + index + ')"><i class="fa-regular fa-cross" onClick="taskDelete(' + index + ')"></i></a>';
+            newListItem.innerHTML =  '<input type="checkbox" onClick="taskDone(' + index + ')"> ' + 
+            value + 
+            ' <a href="javascript:taskDelete(' + index + ')"><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
             document.getElementById("todo").appendChild(newListItem);              
         }
     });
@@ -54,7 +54,12 @@ function taskAdd(){
   
 };
 
+function taskDelete(rowID){
 
+    storageDelete('tasks', rowID);
+
+    taskList();
+}
 
 //When checkbox is check, moves list items to completed list
 function taskDone(rowID){
@@ -91,7 +96,7 @@ function storageList(storage){
     return data;
 }
 
-function starageUpdate(storage, id, value){
+function storageUpdate(storage, id, value){
 
     let data = storageList(storage);
     data[id] = value;
