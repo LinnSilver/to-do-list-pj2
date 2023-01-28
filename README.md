@@ -4,7 +4,7 @@
 #### [\[View the live project here\]](https://linnsilver.github.io/to-do-list-pj2/)
 My To-Do List is a modern romantic to-do list. With time square in monochrome at the background and soft corners to every edge, it gives a calm and still active expression. 
 
-responsivnes image
+## ![Responsiv](assets/images/redeme-images/responsiv-todo.jpg)
 
 # UX User experience
 
@@ -47,16 +47,14 @@ Edit to do tasks.
 ## Testing
 
 -   HTML  **W3C tools**
-
-
+## ![HTML validation](assets/images/redeme-images/html-validator-todo.jpg)
 
 -   CSS  **W3C tools**
-
-
+## ![HTML validation](assets/images/redeme-images/css-validator-todo.jpg)
 
 -   Lighthouse In DevTools
+## ![CSS validation](assets/images/redeme-images/lighthouse-todo.jpg)
 
-## ![CSS validation](https://github.com/LinnSilver/Project1-Farrier/raw/main/assets/images/readme-images/lighthouse.jpg)
 
 ### Browser Compatibility
 

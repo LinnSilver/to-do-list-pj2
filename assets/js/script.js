@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 //Start counting for id number on list task.
 let taskIdCount = 0;
 
@@ -40,7 +42,7 @@ function taskAdd(){
 
     //Prevent empty input.
     if (newTask.trim() === ""){
-        swal.fire("Input field is empty. Please write something!")
+        swal.fire("Input field is empty. Please write something!");
         return false;
     }
 
