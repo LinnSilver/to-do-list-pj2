@@ -46,7 +46,7 @@ function taskAdd(){
         return false;
     }
 
-    //add task to starage
+    //add task to storage
     storageUpdate('tasks', taskIdCount, newTask);
 
     taskList();
@@ -99,7 +99,7 @@ function storageList(storage){
     return data;
 }
 
-//Uppdate storage
+//Update storage
 function storageUpdate(storage, id, value){
 
     let data = storageList(storage);
