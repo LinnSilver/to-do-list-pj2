@@ -22,6 +22,10 @@ h2 {
     border-radius: 7px;
 }
 
+#trash {
+    color: rgb(175, 29, 29);
+}
+
 /* Background hero image */
 .hero {
     background-color: rgb(1, 15, 17);
@@ -51,7 +55,7 @@ ul {
     margin-left: 3px;
 }
 
-/* Input field */
+/* Input field. Design copied from buttons. */
 #newInput {
     color: rgb(0, 0, 0);
     padding: 5px 15px;
@@ -64,6 +68,7 @@ ul {
     margin: 3px;
 }
 
+/*Buttons. Design come from https://flowbite.com/docs/components/buttons/ and had a makeover. */
 .button {
     color: rgb(0, 0, 0);
     padding: 5px 15px;

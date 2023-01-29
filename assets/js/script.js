@@ -26,7 +26,7 @@ function taskList(){
             newListItem.setAttribute("id", 'todo_' + index);
             newListItem.innerHTML = '<input type="checkbox" aria-label="checkbox" onClick="taskDone(' + index + ')"> ' + 
             value + 
-            ' <a href="javascript:taskDelete(' + index + ')" aria-label="Trashcan to delete task" ><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
+            ' <a href="javascript:taskDelete(' + index + ')" id="trash" aria-label="Trashcan to delete task" ><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
             document.getElementById("todo").appendChild(newListItem);                 
         }
     });
