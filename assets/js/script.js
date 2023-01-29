@@ -5,7 +5,7 @@ let taskIdCount = 0;
 
 // list/add/delete
 
-//Load task array
+//List all undone tasks
 function taskList(){
 
     //Load task array
@@ -56,6 +56,7 @@ function taskAdd(){
   
 }
 
+//Remove from storage
 function taskDelete(rowID){
 
     storageDelete('tasks', rowID);
@@ -82,8 +83,7 @@ function taskDone(rowID){
     taskList();
 }
 
-//Storage
-
+//Storage 
 function storageList(storage){
 
     if (localStorage.getItem(storage) === null) {
@@ -92,12 +92,14 @@ function storageList(storage){
 
     let data = JSON.parse(localStorage.getItem(storage));
 
+    //If array is empty reset clear storage and start over
     if(data.join(',').replace(/,/g, '').length === 0) {
         localStorage.clear();
     }
     return data;
 }
 
+//Uppdate storage
 function storageUpdate(storage, id, value){
 
     let data = storageList(storage);
@@ -105,6 +107,7 @@ function storageUpdate(storage, id, value){
     localStorage.setItem(storage,JSON.stringify(data));
 }
 
+//Delete from storage
 function storageDelete(storage, id){
 
     let data = storageList(storage);
