@@ -18,7 +18,7 @@ function taskList(){
 
     document.getElementById("todo").innerHTML = "";
 
-    //Create undone task list 
+    //Create undone task list
     tasks.forEach(function callback(value, index) {
 
         if (value !== null){
@@ -27,20 +27,20 @@ function taskList(){
             newListItem.innerHTML = '<input type="checkbox" aria-label="checkbox" onClick="taskDone(' + index + ')"> ' + 
             value + 
             ' <a href="javascript:taskDelete(' + index + ')" id="trash" aria-label="Trashcan to delete task" ><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
-            document.getElementById("todo").appendChild(newListItem);                 
+            document.getElementById("todo").appendChild(newListItem);
         }
     });
     document.getElementById("newInput").focus();
 }
 
-//Add task to list. 
+//Add task to list
 function taskAdd(){
 
     //Get task info and remove html markup
     let newTask = document.getElementById("newInput").value;
     newTask =newTask.replace(/(<([^>]+)>)/gi, "");
 
-    //Prevent empty input.
+    //Prevent empty input
     if (newTask.trim() === ""){
         swal.fire("Input field is empty. Please write something!");
         return false;
@@ -51,7 +51,7 @@ function taskAdd(){
 
     taskList();
 
-    //clears input field after adding to list.
+    //clears input field after adding to list
     document.getElementById("newInput").value = "";
   
 }
@@ -83,7 +83,7 @@ function taskDone(rowID){
     taskList();
 }
 
-//Storage 
+//Storage
 function storageList(storage){
 
     if (localStorage.getItem(storage) === null) {
@@ -112,7 +112,7 @@ function storageDelete(storage, id){
 
     let data = storageList(storage);
 
-    //remove data
+    //remove data.
     delete data[id];
     
     data.filter(n => n);
@@ -124,7 +124,7 @@ function storageDelete(storage, id){
 
 taskList();
 
-//Listen for click createTaskButton to create list item. 
+//Listen for click createTaskButton to create list item.
 document.getElementById("createTaskButton").addEventListener("click", () => {
     taskAdd();
 });
