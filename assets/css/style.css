@@ -1,89 +1,91 @@
-body{
-    margin: 0;
-    font-family: 'Bad Script', cursive;
-    font-size: 1.25rem;
-    letter-spacing: 0.1rem;
-    color:rgb(89, 238, 238);
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Bad Script', cursive;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  color: rgb(89, 238, 238);
 }
 
 h1 {
-    font-size: 200%;
-    letter-spacing: 0.13rem;
-    margin-left: 3px;
+  font-size: 200%;
+  letter-spacing: 0.13rem;
+  margin-left: 3px;
 }
 
 h2 {
-    font-size: 150%;
-    letter-spacing: 0.13rem;
-    margin-left: 3px;
+  font-size: 150%;
+  letter-spacing: 0.13rem;
+  margin-left: 3px;
 }
 
-.delete {
-    border-radius: 7px;
+/* List ithems */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 3px;
 }
 
+/* Trashcan icon */
 #trash {
-    color: rgb(175, 29, 29);
+  color: rgb(69, 235, 166);
+  font-size: 85%;
+  padding-left: 5px;
 }
 
 /* Background hero image */
 .hero {
-    background-color: rgb(1, 15, 17);
-    background-image: url("../images/times-square-s.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 10px;
-    padding-left: 0;
-    padding-left: 0;
-    padding-bottom: 800px;
+  background-color: rgb(1, 15, 17);
+  background-image: url("../images/times-square-s.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-left: 0;
+  padding-bottom: 800px;
 }
 
-/* Container for list */
+/* Container for list and buttons */
 .backgroundbox {
-    background-color: rgba(1, 12, 15, 0.7);
-    margin: 0 auto;
-    width: 80%;
-    border: 4px solid rgb(89, 238, 238);
-    border-radius: 7px;
-    margin-top: 20px;
-    padding: 15px;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-left: 3px;
+  background-color: rgba(1, 12, 15, 0.7);
+  margin: 0 auto;
+  width: 80%;
+  border: 4px solid rgb(89, 238, 238);
+  border-radius: 7px;
+  margin-top: 20px;
+  padding: 15px;
 }
 
 /* Input field. Design copied from buttons. */
 #newInput {
-    color: rgb(0, 0, 0);
-    padding: 5px 15px;
-    background-color: rgb(89, 238, 238);
-    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1rem;
-    margin: 3px;
+  color: rgb(0, 0, 0);
+  padding: 5px 15px;
+  background-color: rgb(89, 238, 238);
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 3px;
 }
 
 /*Buttons. Design come from https://flowbite.com/docs/components/buttons/ and had a makeover. */
 .button {
-    color: rgb(0, 0, 0);
-    padding: 5px 15px;
-    background-color: rgb(9, 131, 131);
-    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1rem;
-    margin: 3px;
+  color: rgb(0, 0, 0);
+  padding: 5px 15px;
+  background-color: rgb(9, 131, 131);
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 3px;
 }
 
 /* Media query (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .backgroundbox {
-      width: 500px;
-    }
+  .backgroundbox {
+    width: 500px;
+  }
 }

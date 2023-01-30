@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="To-Do-List, Helps you keep order, easy planning">
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
-    <!-- Fontawesome and Favicon -->
-    <script src="https://kit.fontawesome.com/05537a6809.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon(1).ico">
-    <!-- Alert styling, was downloaded from https://sweetalert2.github.io/-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
 
-   <title>To-Do List</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="To-Do-List, Helps you keep order, easy planning">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Fontawesome and Favicon -->
+  <script src="https://kit.fontawesome.com/05537a6809.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon(1).ico">
+  <!-- Alert styling, was downloaded from https://sweetalert2.github.io/-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
+
+  <title>To-Do List</title>
 </head>
 
-  <body >
-    <div class="hero" >
-      <section class="backgroundbox">
-        <h1><i class="fa-regular fa-square-check"></i> To-Do List</h1>
-        <div>
-          <!--Input field-->
-          <input id="newInput" aria-label="Enter to do task" type="text">
-            <!--Button to submit task to list-->
-            <button id="createTaskButton" class="button" type="button">Create new task</button>
-              <ul id="todo">
+<body>
+  <div class="hero">
+    <section class="backgroundbox">
+      <h1><i class="fa-regular fa-square-check"></i> To-Do List</h1>
+      <div>
+        <!--Input field-->
+        <input id="newInput" aria-label="Enter to do task" type="text">
+        <!--Button to submit task to list-->
+        <button id="createTaskButton" class="button" type="button">Create new task</button>
+        <ul id="todo">
 
-              </ul>
-        </div>
+        </ul>
+      </div>
 
-        <div>
-          <h2>Completed</h2>
-          <ul id="done">
+      <div>
+        <h2>Completed</h2>
+        <ul id="done">
 
-          </ul>
-            <!--Button to clear completed tasks-->
-            <button id="clearTaskButton" class="button" type="button">Clear completed</button>
-        </div>
-      </section>
-    </div>
-      <!--JavaScript-->
-      <script src="assets/js/script.js"></script>
-  </body>
+        </ul>
+        <!--Button to clear completed tasks-->
+        <button id="clearTaskButton" class="button" type="button">Clear completed</button>
+      </div>
+    </section>
+  </div>
+  <!--JavaScript-->
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
