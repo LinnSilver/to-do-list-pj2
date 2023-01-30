@@ -2,19 +2,23 @@
 # To-Do List
 
 #### [\[View the live project here\]](https://linnsilver.github.io/to-do-list-pj2/)
-My To-Do List is a modern romantic to-do list. With time square in monochrome at the background and soft corners to every edge, it gives a calm and still active expression. The background in the box is darker to make it easier to read on lighter parts.
+A To-Do List with is a modern romantic design. Providing an easy to use and a comfortable way to have control over users to-dos.  With time square in monochrome at the background and soft corners to every edge, it gives a calm and still active expression without being boring.
 
 ## ![Responsiv](assets/images/redeme-images/responsiv-todo.jpg)
 
 # UX User experience
 
-My To-Do List is a modern romantic to-do list. With time square in monochrome at the background and soft corners to every edge, it gives a came and still active expression. The background in the box is darker to make it easier to read on lighter parts.
+This easy to use to-do list provides a quick way for the user to keep track of to-dos. The first section contains the uncompleted tasks, with a checkbox to check completed tasks and a trashcan to remove tasks that don't need to be completed. When a task been checked, it moves to completed section to make it easy for user to see what have been achieved. The background to the list is darker to make text easier to read. Input field, checkbox and trashcan are provided with aria labels for users how use screen readers. Uncompleted tasks are stored locally, so the page can be refreshed without loosing content.
 
 #  Features
 
 ### Create new task
-By clicking button Create new task or by simply clicking enter key, you create a new to-do task. It's easier for the user to be able to chose how to submit to list.
+By writing new task in the input field and clicking button Create new task or by simply clicking enter key, you will create a new to-do task. It's easier for the user to be able to chose how to submit to list.
 ## ![Create](assets/images/redeme-images/create-new-task.jpg)
+
+### Try to submit empty input field
+An attempt to submit an empty input field, or only blanks, will produce an alert who asks the user to write something.
+## ![Create](assets/images/redeme-images/alert.jpg)
 
 ### Checkbox on task
 Every uncompleted task have a checkbox to mark when the task is completed. When checked, the task moves to completed section. The checkbox is now checked.
@@ -48,6 +52,7 @@ Edit to do tasks.
 -   Gitpod
 -   Google Fonts
 -   Font Awesome
+-   JSON
 
 ## Testing
 
