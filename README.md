@@ -65,6 +65,10 @@ Edit to do tasks.
 -   Lighthouse In DevTools
 ## ![CSS validation](assets/images/redeme-images/lighthouse-todo.jpg)
 
+-   JShint
+## ![JShint validation]()
+
+
 
 ### Browser Compatibility
 

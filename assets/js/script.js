@@ -3,7 +3,9 @@
 //Start counting for id number on list task.
 let taskIdCount = 0;
 
-// list/add/delete
+/**
+ * list/add/delete
+ */
 
 //List all undone tasks
 function taskList(){
@@ -24,9 +26,29 @@ function taskList(){
         if (value !== null){
             let newListItem = document.createElement("li");
             newListItem.setAttribute("id", 'todo_' + index);
-            newListItem.innerHTML = '<input type="checkbox" aria-label="checkbox" onClick="taskDone(' + index + ')"> ' + 
-            value + 
-            ' <a href="javascript:taskDelete(' + index + ')" id="trash" aria-label="Trashcan to delete task" ><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
+
+            let taskCompleteCheckbox = document.createElement("input");
+            taskCompleteCheckbox.setAttribute("type", "checkbox");
+
+            taskCompleteCheckbox.addEventListener("click", function(){
+                taskDone(index);
+            })
+
+            newListItem.appendChild(taskCompleteCheckbox);
+            let text = document.createTextNode(value);
+            newListItem.appendChild(text);
+
+            let trashCan = document.createElement("i");
+
+            trashCan.setAttribute("class", "fa-regular fa-trash-can trashButton");
+            trashCan.addEventListener("click", function() {
+                taskDelete(index);
+            })
+            newListItem.appendChild(trashCan);
+
+           // newListItem.innerHTML = '<input type="checkbox" aria-label="checkbox" onClick="taskDone(' + index + ')"> ' + 
+           // value + 
+           // ' <a href="javascript:taskDelete(' + index + ')" id="trash" aria-label="Trashcan to delete task" ><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
             document.getElementById("todo").appendChild(newListItem);
         }
     });
