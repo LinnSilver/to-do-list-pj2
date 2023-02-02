@@ -95,10 +95,19 @@ function taskDone(rowID){
     //Add new row to done
     let newDone = document.createElement("li");
 
-    //add Get row to new row
-    newDone.innerHTML = '<input type="checkbox" checked disabled="disabled"> ' + value;
-    document.getElementById("done").appendChild(newDone);
+    //Add row to new row
+   // newDone.innerHTML = '<input type="checkbox" checked disabled="disabled"> ' + value;
+    let newDoneBox = document.createElement("input");
+    newDoneBox.setAttribute("type", "checkbox");
+    newDoneBox.setAttribute("checked", "");
+    newDoneBox.setAttribute("disabled", "disabled")
 
+    newDone.appendChild(newDoneBox);
+    let text =document.createTextNode(value);
+    newDone.appendChild(text);
+    
+    document.getElementById("done").appendChild(newDone);
+ 
     //Remove from storage
     storageDelete('tasks', rowID);
 
