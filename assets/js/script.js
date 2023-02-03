@@ -6,7 +6,6 @@ let taskIdCount = 0;
 /**
  * list/add/delete
  */
-
 //List all undone tasks
 function taskList(){
 
@@ -29,10 +28,9 @@ function taskList(){
 
             let taskCompleteCheckbox = document.createElement("input");
             taskCompleteCheckbox.setAttribute("type", "checkbox");
-
             taskCompleteCheckbox.addEventListener("click", function(){
                 taskDone(index);
-            })
+            });
 
             newListItem.appendChild(taskCompleteCheckbox);
             let text = document.createTextNode(value);
@@ -43,7 +41,7 @@ function taskList(){
             trashCan.setAttribute("class", "fa-regular fa-trash-can trashButton");
             trashCan.addEventListener("click", function() {
                 taskDelete(index);
-            })
+            });
             newListItem.appendChild(trashCan);
 
            // newListItem.innerHTML = '<input type="checkbox" aria-label="checkbox" onClick="taskDone(' + index + ')"> ' + 
@@ -55,12 +53,14 @@ function taskList(){
     document.getElementById("newInput").focus();
 }
 
-//Add task to list
+/**
+ * Add task to list
+ */
 function taskAdd(){
 
     //Get task info and remove html markup
     let newTask = document.getElementById("newInput").value;
-    newTask =newTask.replace(/(<([^>]+)>)/gi, "");
+    //newTask =newTask.replace(/(<([^>]+)>)/gi, "");
 
     //Prevent empty input
     if (newTask.trim() === ""){
@@ -78,7 +78,9 @@ function taskAdd(){
   
 }
 
-//Remove from storage
+/**
+ * Remove from storage
+ */
 function taskDelete(rowID){
 
     storageDelete('tasks', rowID);
@@ -86,7 +88,9 @@ function taskDelete(rowID){
     taskList();
 }
 
-//When checkbox is check, moves list items to completed list
+/**
+ * When checkbox is check, moves list items to completed list
+ */
 function taskDone(rowID){
 
     //Get value from id row
@@ -100,7 +104,7 @@ function taskDone(rowID){
     let newDoneBox = document.createElement("input");
     newDoneBox.setAttribute("type", "checkbox");
     newDoneBox.setAttribute("checked", "");
-    newDoneBox.setAttribute("disabled", "disabled")
+    newDoneBox.setAttribute("disabled", "disabled");
 
     newDone.appendChild(newDoneBox);
     let text =document.createTextNode(value);
@@ -114,7 +118,9 @@ function taskDone(rowID){
     taskList();
 }
 
-//Storage
+/**
+ * Storage
+ */
 function storageList(storage){
 
     if (localStorage.getItem(storage) === null) {
@@ -130,7 +136,9 @@ function storageList(storage){
     return data;
 }
 
-//Update storage
+/**
+ * Update storage
+ */
 function storageUpdate(storage, id, value){
 
     let data = storageList(storage);
@@ -138,7 +146,9 @@ function storageUpdate(storage, id, value){
     localStorage.setItem(storage,JSON.stringify(data));
 }
 
-//Delete from storage
+/**
+ * Delete from storage
+ */
 function storageDelete(storage, id){
 
     let data = storageList(storage);

@@ -2,18 +2,21 @@
 # To-Do List
 
 #### [\[View the live project here\]](https://linnsilver.github.io/to-do-list-pj2/)
-A To-Do List with is a modern romantic design. Providing an easy to use and a comfortable way to have control over users to-dos.  With time square in monochrome at the background and soft corners to every edge, it gives a calm and still active expression without being boring.
+A To-Do List with a modern romantic design. Providing an easy to use and a comfortable way to have control over users to-dos.  With time square in monochrome at the background and soft corners to every edge, it gives a calm and still active expression without being boring.
 
 ## ![Responsiv](assets/images/redeme-images/responsiv-todo.jpg)
 
 # UX User experience
 
-This easy to use to-do list provides a quick way for the user to keep track of to-dos. The first section contains the uncompleted tasks, with a checkbox to check completed tasks and a trashcan to remove tasks that don't need to be completed. When a task been checked, it moves to completed section to make it easy for user to see what have been achieved. The background to the list is darker to make text easier to read. Input field, checkbox and trashcan are provided with aria labels for users how use screen readers. Uncompleted tasks are stored locally, so the page can be refreshed without loosing content.
+This easy to use to-do list provides a quick way for the user to keep track of to-dos. Uncompleted tasks are stored locally, so the page can be refreshed without loosing content. The first section contains the uncompleted tasks, with a checkbox to check completed tasks and a trashcan to remove tasks that don't need to be completed. When a task been checked, it moves to completed section to make it easy for user to see what have been achieved. The background to the list is darker to make text easier to read. Input field, checkbox and trashcan are provided with aria labels for users how use screen readers. 
 
 #  Features
 
+### Cursor focus 
+To make it easier for the user to add the task, the cursor will be in focus in the input field when the page is loaded, and after every completed task.
+
 ### Create new task
-By writing new task in the input field and clicking button Create new task or by simply clicking enter key, you will create a new to-do task. It's easier for the user to be able to chose how to submit to list.
+By writing an new task in the input field and clicking button Create new task or by simply clicking enter key, you will create a new to-do task. It's easier for the user to be able to chose how to submit to list.
 ## ![Create](assets/images/redeme-images/create-new-task.jpg)
 
 ### Try to submit empty input field
@@ -31,9 +34,6 @@ Every uncompleted task is equipped with a trashcan button, when clicked the task
 ### Clear all completed tasks
 Clicking the Clear completed button clears out all completed tasks. Reload page will do the same. It's sometimes convenient for user to see which tasks have been completed, still saving them too long will just be cluttered, why it's better for the user that the completed list is deleted on page refresh.
 ## ![Check](assets/images/redeme-images/completed.jpg)
-
-### Cursor focus 
-To make it easier for the user to add the task, the cursor will be in focus in the input field when the page is loaded, and after every completed task.
 
 ###  Favicon
 Favicon icon on the tab in the browser. Makes it easier for the user to find the page if there are many open tabs.
@@ -66,7 +66,9 @@ Edit to do tasks.
 ## ![CSS validation](assets/images/redeme-images/lighthouse-todo.jpg)
 
 -   JShint
-## ![JShint validation]()
+
+#### Error message: One undefined vareble is a miss understandin of the alertmessage: swal.fire()
+## ![JShint validation](assets/images/redeme-images/jshint.jpg)
 
 
 
@@ -112,7 +114,7 @@ Following mobiles has been tested:
 |Press **enter key** with content in input field        |Creates new to do task    |Pass |
 |Click checkbox in front of uncompleted task            |Moves task to completed section      |Pass |
 |Click trashcan icon 	        |Delete task at same row			|Pass |
-|Click **Clear completed** button deletes all completed tasks |Delete all completed tasks    |Pass |
+|Click **Clear completed** button  |Deletes all completed tasks    |Pass |
 |Refresh webpage                |All undone tasks: Reload. All completed tasks: Delete  |Pass |
 |Mouse hover over trashcan                          |Cursor changes to hand pointer           |Pass |
 |Trying to write machine code in input field  |special characters, /(<([^>]+)> disappears from created task  |Pass |

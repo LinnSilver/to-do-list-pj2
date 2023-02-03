@@ -24,7 +24,7 @@ h2 {
 /* List ithems */
 ul {
   list-style-type: none;
-  padding-left: 0;
+  padding-left: 0px;
   margin-left: 3px;
 }
 
@@ -33,6 +33,7 @@ ul {
   color: rgb(69, 235, 166);
   font-size: 85%;
   padding-left: 5px;
+  cursor: pointer;
 }
 
 /* Background hero image */
