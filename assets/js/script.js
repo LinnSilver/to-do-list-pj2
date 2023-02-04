@@ -30,7 +30,7 @@ function taskList(){
             let taskCompleteCheckbox = document.createElement("input");
             taskCompleteCheckbox.setAttribute("type", "checkbox");
             taskCompleteCheckbox.setAttribute("aria-label", "checkbox");
-            taskCompleteCheckbox.setAttribute("class", "box");
+            taskCompleteCheckbox.setAttribute("class", "checkBox");
             taskCompleteCheckbox.addEventListener("click", function(){
                 taskDone(index);
             });

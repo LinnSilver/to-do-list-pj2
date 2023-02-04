@@ -29,8 +29,10 @@ ul {
 }
 
 /* Checkbox */
-.box {
-  padding-right: 30px;
+.checkBox {
+  margin-right: 17px;
+  width: 17px;
+  height: 17px;
 }
 
 /* Trashcan icon */
