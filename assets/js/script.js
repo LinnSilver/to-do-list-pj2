@@ -1,16 +1,16 @@
 /*jshint esversion: 6 */
 
-//Start counting for id number on list task.
+// Start counting for id number on list task.
 let taskIdCount = 0;
 
 /**
- * list/add/delete
+ * List/add/delete
  */
-//List all undone tasks
+// List all undone tasks
 function taskList(){
 
     //Load task array
-    let tasks = storageList('tasks');
+    let tasks = storageList("tasks");
 
     if (tasks.length === 0){
         return false;
@@ -24,10 +24,11 @@ function taskList(){
 
         if (value !== null){
             let newListItem = document.createElement("li");
-            newListItem.setAttribute("id", 'todo_' + index);
+            newListItem.setAttribute("id", "todo_" + index);
 
+            //Create undone checkbox
             let taskCompleteCheckbox = document.createElement("input");
-            taskCompleteCheckbox.setAttribute("type", "checkbox");
+            taskCompleteCheckbox.setAttribute("type", "checkbox", "aria-label", "checkbox", "class", "box");
             taskCompleteCheckbox.addEventListener("click", function(){
                 taskDone(index);
             });
@@ -36,17 +37,15 @@ function taskList(){
             let text = document.createTextNode(value);
             newListItem.appendChild(text);
 
+            //Create trascan to undone task
             let trashCan = document.createElement("i");
-
-            trashCan.setAttribute("class", "fa-regular fa-trash-can trashButton");
+            trashCan.setAttribute("class", "fa-regular fa-trash-can trashButton", "aria-label", "Trashcan to delete task");
             trashCan.addEventListener("click", function() {
                 taskDelete(index);
             });
+
             newListItem.appendChild(trashCan);
 
-           // newListItem.innerHTML = '<input type="checkbox" aria-label="checkbox" onClick="taskDone(' + index + ')"> ' + 
-           // value + 
-           // ' <a href="javascript:taskDelete(' + index + ')" id="trash" aria-label="Trashcan to delete task" ><i class="fa-regular fa-trash-can" onClick="taskDelete(' + index + ')"></i></a>';
             document.getElementById("todo").appendChild(newListItem);
         }
     });
@@ -58,22 +57,21 @@ function taskList(){
  */
 function taskAdd(){
 
-    //Get task info and remove html markup
+    // Get task info and remove html markup
     let newTask = document.getElementById("newInput").value;
-    //newTask =newTask.replace(/(<([^>]+)>)/gi, "");
 
-    //Prevent empty input
+    // Prevent empty input
     if (newTask.trim() === ""){
         swal.fire("Input field is empty. Please write something!");
         return false;
     }
 
-    //add task to storage
-    storageUpdate('tasks', taskIdCount, newTask);
+    // Add task to storage
+    storageUpdate("tasks", taskIdCount, newTask);
 
     taskList();
 
-    //clears input field after adding to list
+    // Clears input field after adding to list
     document.getElementById("newInput").value = "";
   
 }
@@ -83,7 +81,7 @@ function taskAdd(){
  */
 function taskDelete(rowID){
 
-    storageDelete('tasks', rowID);
+    storageDelete("tasks", rowID);
 
     taskList();
 }
@@ -93,14 +91,13 @@ function taskDelete(rowID){
  */
 function taskDone(rowID){
 
-    //Get value from id row
-    let value = document.getElementById('todo_' + rowID).innerText;
+    // Get value from id row
+    let value = document.getElementById("todo_" + rowID).innerText;
     
-    //Add new row to done
+    // Add new row to done
     let newDone = document.createElement("li");
 
-    //Add row to new row
-   // newDone.innerHTML = '<input type="checkbox" checked disabled="disabled"> ' + value;
+    // Add row to new row
     let newDoneBox = document.createElement("input");
     newDoneBox.setAttribute("type", "checkbox");
     newDoneBox.setAttribute("checked", "");
@@ -113,7 +110,7 @@ function taskDone(rowID){
     document.getElementById("done").appendChild(newDone);
  
     //Remove from storage
-    storageDelete('tasks', rowID);
+    storageDelete("tasks", rowID);
 
     taskList();
 }
@@ -129,8 +126,8 @@ function storageList(storage){
 
     let data = JSON.parse(localStorage.getItem(storage));
 
-    //If array is empty reset clear storage and start over
-    if(data.join(',').replace(/,/g, '').length === 0) {
+    // If array is empty reset clear storage and start over
+    if(data.join(",").replace(/,/g, "").length === 0) {
         localStorage.clear();
     }
     return data;
@@ -153,7 +150,7 @@ function storageDelete(storage, id){
 
     let data = storageList(storage);
 
-    //remove data.
+    // Remove data.
     delete data[id];
     
     data.filter(n => n);
@@ -165,12 +162,12 @@ function storageDelete(storage, id){
 
 taskList();
 
-//Listen for click createTaskButton to create list item.
+// Listen for click createTaskButton to create list item.
 document.getElementById("createTaskButton").addEventListener("click", () => {
     taskAdd();
 });
 
-//Listen for enter key up to create list item.
+// Listen for enter key up to create list item.
 let newTask = document.getElementById("newInput");
 newTask.addEventListener("keyup", (event) => {
     if(event.key === "Enter"){
@@ -179,7 +176,7 @@ newTask.addEventListener("keyup", (event) => {
     }
 });
 
-//Listen for click clearTaskButton to remove done list item. 
+// Listen for click clearTaskButton to remove done list item. 
 document.getElementById("clearTaskButton").addEventListener("click", () => {
     document.getElementById("done").innerHTML = "";
 });

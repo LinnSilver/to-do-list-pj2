@@ -2,7 +2,7 @@
 # To-Do List
 
 #### [\[View the live project here\]](https://linnsilver.github.io/to-do-list-pj2/)
-A To-Do List with a modern romantic design. Providing an easy to use and a comfortable way to have control over users to-dos.  With time square in monochrome at the background and soft corners to every edge, it gives a calm and still active expression without being boring.
+A To-Do List with a modern, romantic design. Providing an easy to use and a comfortable way to have control over users to-dos.  With time square in monochrome at the background and soft corners to every edge, it gives a calm and still active expression without being boring.
 
 ## ![Responsiv](assets/images/redeme-images/responsiv-todo.jpg)
 
@@ -16,7 +16,7 @@ This easy to use to-do list provides a quick way for the user to keep track of t
 To make it easier for the user to add the task, the cursor will be in focus in the input field when the page is loaded, and after every completed task.
 
 ### Create new task
-By writing an new task in the input field and clicking button Create new task or by simply clicking enter key, you will create a new to-do task. It's easier for the user to be able to chose how to submit to list.
+By writing a new task in the input field and clicking button Create new task or by simply clicking enter key, you will create a new to-do task. It's easier for the user to be able to chose how to submit to list.
 ## ![Create](assets/images/redeme-images/create-new-task.jpg)
 
 ### Try to submit empty input field
@@ -65,9 +65,9 @@ Edit to do tasks.
 -   Lighthouse In DevTools
 ## ![CSS validation](assets/images/redeme-images/lighthouse-todo.jpg)
 
--   JShint
+-   JSHint
 
-#### Error message: One undefined vareble is a miss understandin of the alertmessage: swal.fire()
+#### Error message: One undefined variable, is a miss understanding of the alert message: swal.fire()
 ## ![JShint validation](assets/images/redeme-images/jshint.jpg)
 
 
@@ -110,14 +110,13 @@ Following mobiles has been tested:
 |After creating new task        |Cursor focus to input field            |Pass |
 |Pressing **enter key** with empty input field          |Alert message: Please write something |Pass |
 |Click **Create task** button with empty input field    |Alert message: Please write something     |Pass |
-|Click **Create task** button with content in input field  |Creates new to do task	|Pass  |
-|Press **enter key** with content in input field        |Creates new to do task    |Pass |
+|Click **Create task** button with content in input field |Creates new to do task |Pass |
+|Press **enter key** with content in input field        |Creates new to do task   |Pass |
 |Click checkbox in front of uncompleted task            |Moves task to completed section      |Pass |
-|Click trashcan icon 	        |Delete task at same row			|Pass |
-|Click **Clear completed** button  |Deletes all completed tasks    |Pass |
-|Refresh webpage                |All undone tasks: Reload. All completed tasks: Delete  |Pass |
-|Mouse hover over trashcan                          |Cursor changes to hand pointer           |Pass |
-|Trying to write machine code in input field  |special characters, /(<([^>]+)> disappears from created task  |Pass |
+|Click trashcan icon 	     |Delete task at same row			          |Pass |
+|Click **Clear completed** button  |Deletes all completed tasks           |Pass |
+|Refresh webpage            |All undone tasks: Reload. All completed tasks: Delete |Pass |
+|Mouse hover over trashcan  |Cursor changes to hand pointer           |Pass |
 
 
 ## Deployment
