@@ -52,6 +52,7 @@ function taskList(){
             document.getElementById("todo").appendChild(newListItem);
         }
     });
+
     document.getElementById("newInput").focus();
 }
 
@@ -76,7 +77,6 @@ function taskAdd(){
 
     // Clears input field after adding to list
     document.getElementById("newInput").value = "";
-  
 }
 
 /**
@@ -133,6 +133,7 @@ function storageList(storage){
     if(data.join(",").replace(/,/g, "").length === 0) {
         localStorage.clear();
     }
+
     return data;
 }
 
@@ -163,6 +164,11 @@ function storageDelete(storage, id){
     localStorage.setItem(storage, JSON.stringify(data));
 }
 
+/**
+ * initialize
+ */
+
+//Load task list
 taskList();
 
 // Listen for click createTaskButton to create list item.

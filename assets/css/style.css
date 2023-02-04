@@ -41,6 +41,10 @@ ul {
   cursor: pointer;
 }
 
+.trashButton:hover {
+  color: #d8e8f0;
+}
+
 /* Background hero image */
 .hero {
   background-color: rgb(1, 15, 17);
