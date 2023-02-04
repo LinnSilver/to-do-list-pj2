@@ -35,9 +35,9 @@ ul {
 
 /* Trashcan icon */
 .trashButton {
-  color: rgb(69, 235, 166);
+  color:rgb(169, 189, 185);
   font-size: 85%;
-  padding-left: 10px;
+  padding-left: 15px;
   cursor: pointer;
 }
 

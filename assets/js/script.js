@@ -28,7 +28,9 @@ function taskList(){
 
             //Create undone checkbox
             let taskCompleteCheckbox = document.createElement("input");
-            taskCompleteCheckbox.setAttribute("type", "checkbox", "aria-label", "checkbox", "class", "box");
+            taskCompleteCheckbox.setAttribute("type", "checkbox");
+            taskCompleteCheckbox.setAttribute("aria-label", "checkbox");
+            taskCompleteCheckbox.setAttribute("class", "box");
             taskCompleteCheckbox.addEventListener("click", function(){
                 taskDone(index);
             });
@@ -39,7 +41,8 @@ function taskList(){
 
             //Create trascan to undone task
             let trashCan = document.createElement("i");
-            trashCan.setAttribute("class", "fa-regular fa-trash-can trashButton", "aria-label", "Trashcan to delete task");
+            trashCan.setAttribute("class", "fa-regular fa-trash-can trashButton");
+            trashCan.setAttribute("aria-label", "Trashcan to delete task");
             trashCan.addEventListener("click", function() {
                 taskDelete(index);
             });
