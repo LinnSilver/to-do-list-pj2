@@ -28,7 +28,7 @@ Every uncompleted task have a checkbox to mark when the task is completed. When 
 ## ![Check](assets/images/redeme-images/to-do.jpg)
 
 ### Delete task
-Every uncompleted task is equipped with a trashcan button, when clicked the task is deleted. Sometimes a User wants to remove an uncompleted task, this makes it possible to do that.
+Every uncompleted task is equipped with a trashcan button, on hover over with the mouse the icon changes color to white and the mouse pointer changes appearance to a hand. When clicked, the task is deleted. Sometimes a User wants to remove an uncompleted task, this makes it possible to do that.
 ## ![Check](assets/images/redeme-images/to-do-trashcan.jpg)
 
 ### Clear all completed tasks
