@@ -40,7 +40,8 @@ Favicon icon on the tab in the browser. Makes it easier for the user to find the
 ## ![Check](assets/images/redeme-images/favicon.jpg)
 
 ### Features to implement later
-Edit to do tasks.
+- Edit to do tasks. 
+- Change the checkbox to custom design.
 
 # Technologies
 
@@ -174,4 +175,4 @@ All content on this webpage was written by the developer.
 
 ### Acknowledgments
 
-Thank you to my mentor Brian Macharia. For Your support and guidance. Your great knowledge and commitment during this project has made my project better and more enjoyable.
+Thanks to my mentor Brian Macharia. For your support and guidance. And for encouraging me to do even better.
